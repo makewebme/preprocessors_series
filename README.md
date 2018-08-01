@@ -1,2 +1,2 @@
-# preprocessors_series
-Файлы к циклу роликов "Расставим точки над.. CSS-препроцессорами (Sass, Less, Stylus)"
+# Расставим точки над.. CSS-препроцессорами (Sass, Less, Stylus)
+Файлы к циклу роликов на YouTube-канале MakeWeb.me
