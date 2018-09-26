@@ -1,0 +1,42 @@
+$color: red;
+$color1: green;
+$color2: blue;
+$amount: 60%;
+$amount-opacity: 0.3;
+
+div {
+  height: 60px;
+  width: 180px;
+}
+
+div+div { margin-top: 10px }
+
+/* Насыщение цвета */
+.saturate { background-color: saturate($color, $amount) }
+
+/* Ослабление насыщения цвета */
+.desaturate { background-color: desaturate($color, $amount) }
+
+/* Освещение */
+.lighten { background-color: lighten($color, $amount) }
+
+/* Затемнение */
+.darken { background-color: darken($color, $amount) }
+
+/* Изменение цветового оттенка */
+.adjust-hue { background-color: adjust-hue($color, $amount) }
+
+/* Степень НЕпрозрачности */
+.opacify { background-color: opacify($color, $amount-opacity) }
+
+/* Степень прозрачности */
+.transparentize { background-color: transparentize($color, $amount-opacity) }
+
+/* Смешивание цветов */
+.mix { background-color: mix($color1, $color2, $amount) }
+
+/* Привести цвет к черно-белому эквиваленту */
+.grayscale { background-color: grayscale($color) }
+
+/* Привести цвет к противоположному */
+.complement { background-color: complement($color) }

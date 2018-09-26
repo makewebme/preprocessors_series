@@ -1,0 +1,53 @@
+.message-form {
+  margin: 0 auto;
+  background-color: lighten($gray-light, 3%);
+  background-image: url('../img/img_forms/mail-icon.svg');
+  background-repeat: no-repeat;
+  background-position: 84% 60%;
+  padding: 30px 35px 35px;
+
+  @media(max-width: 995px) {
+    width: auto;
+    margin: 0;
+    background-position: 85% 60%;
+    padding: 30px 25px 35px;
+  }
+
+  @media(max-width: 797px) {
+    background-image: none;
+    padding: 15px 10px 25px;
+  }
+
+  .form-control.inline-form[type=text] {
+    width: 100%; 
+    float: none; 
+  }
+
+  .form-control.inline-form[type=mail] {
+    width: 100%; 
+  }
+}
+
+.message-form__input {
+  max-width: 470px;
+
+
+  & .form-control,
+  .form-submitting__select {
+    margin: 10px 0;
+    display: block;
+  }
+
+  & .input-group-addon {
+    width: auto;
+    margin-top: 10px;
+
+    @media(max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 797px) {
+    max-width: inherit;
+  }
+}

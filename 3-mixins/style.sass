@@ -1,0 +1,38 @@
+=border-top-radius($radius)
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+
+=border-right-radius($radius)
+  border-top-right-radius: $radius
+  border-bottom-right-radius: $radius
+
+=border-bottom-radius($radius)
+  border-bottom-right-radius: $radius
+  border-bottom-left-radius: $radius
+
+=border-left-radius($radius)
+  border-top-left-radius: $radius
+  border-bottom-left-radius: $radius
+
+// Use mixins
+
+.cont
+  display: flex
+  justify-content: space-around
+
+.block
+  width: 20%
+  height: 100px
+  background-color: red
+
+.block1
+  +border-top-radius(10px)
+
+.block2
+  +border-right-radius(10px)
+
+.block3
+  +border-bottom-radius(10px)
+
+.block4
+  +border-left-radius(10px)

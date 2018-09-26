@@ -1,0 +1,117 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+
+// Dropdown arrow/caret
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top:   $caret-width-base dashed;
+  border-top:   $caret-width-base solid \9; // IE8
+  border-right: $caret-width-base solid transparent;
+  border-left:  $caret-width-base solid transparent;
+}
+
+.caret-select {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: block;
+  width: 13px;
+  height: 8px;
+  background: url('../img/icons/icon_arrow-select.png');
+  transform: translateY(-50%);
+}
+
+// The dropdown wrapper (div)
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  @media(max-width: 470px) {
+    margin-left: 15px;
+  }
+}
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+// The dropdown menu (ul)
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0; // override default ul
+  list-style: none;
+  font-size: $font-size-base;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  background-color: $dropdown-bg;
+  border: 1px solid $dropdown-fallback-border; // IE8 fallback
+  border: 1px solid $dropdown-border;
+  border-radius: $border-radius-base;
+  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  background-clip: padding-box;
+
+  @media(max-width: 470px) {
+    left: 15px;
+  }
+
+  // Links within the dropdown menu
+  > li > a {
+    display: block;
+    padding: 10px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height-base;
+    color: $dropdown-link-color;
+    white-space: nowrap;
+  }
+}
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $dropdown-link-hover-color;
+    background-color: $dropdown-link-hover-bg;
+  }
+}
+
+// Active state
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+    outline: 0;
+    background-color: $dropdown-link-active-bg;
+  }
+}
+
+// Open state for the dropdown
+.open {
+  display: block; // для запуска пользовательского скрипта
+  // Show the menu
+  > .dropdown-menu {
+    display: block;
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}

@@ -1,0 +1,40 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+.breadcrumb {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 5px; // Для выравнивания по логотипу
+  @include cf();
+}
+
+.breadcrumb__item {
+  float: left;
+  font-family: $font-family-roboto;
+
+  &::before {
+    content: "#{$breadcrumb-separator}";
+    color: $light-black;
+    padding: 0 10px;
+  }
+
+  &:first-of-type {
+    &::before {
+      display: none;
+    }
+  }
+
+  &_active {
+    color: $gray;
+  }
+}
+
+.breadcrumb__link {
+  color: $light-black;
+
+  &:hover {
+    color: $light-black;
+    text-decoration: none;
+  }
+}

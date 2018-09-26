@@ -1,0 +1,59 @@
+@charset "UTF-8";
+div {
+  height: 60px;
+  width: 180px;
+}
+
+div + div {
+  margin-top: 10px;
+}
+
+/* Насыщение цвета */
+.saturate {
+  background-color: red;
+}
+
+/* Ослабление насыщения цвета */
+.desaturate {
+  background-color: #b34d4d;
+}
+
+/* Освещение */
+.lighten {
+  background-color: white;
+}
+
+/* Затемнение */
+.darken {
+  background-color: black;
+}
+
+/* Изменение цветового оттенка */
+.adjust-hue {
+  background-color: yellow;
+}
+
+/* Степень НЕпрозрачности */
+.opacify {
+  background-color: red;
+}
+
+/* Степень прозрачности */
+.transparentize {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+/* Смешивание цветов */
+.mix {
+  background-color: #004d66;
+}
+
+/* Привести цвет к черно-белому эквиваленту */
+.grayscale {
+  background-color: gray;
+}
+
+/* Привести цвет к противоположному */
+.complement {
+  background-color: cyan;
+}

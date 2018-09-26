@@ -1,0 +1,14 @@
+@enable-rounded: true;
+
+.card {
+  padding: 20px;
+  background-color: red;
+
+  & when (@enable-rounded) {
+    border-radius: 10px;
+  }
+
+  & when not (@enable-rounded) {
+    background-color: green;
+  }
+}

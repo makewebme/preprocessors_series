@@ -1,0 +1,146 @@
+// Tabs
+// -------------------------
+
+.tab {
+  @include cf();
+  border-bottom: 1px solid $light-black-alfa10;
+  position: relative;
+  transition: all .4s;
+  left: 0;
+
+  @media(max-width: 470px) {
+    margin: 0 -15px;
+    min-width: 450px;
+    padding: 0 15px;
+  }
+}
+
+.tab__item {
+  float: left;
+  padding: 0 15px;
+
+  @media (max-width: 430px) {
+    padding: 0 7px;
+  }
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.tab__link {
+  position: relative;
+  display: block;
+  padding: 20px 0;
+  font-family: $font-family-roboto;
+  font-size: 18px;
+  line-height: $line-height-base;
+  color: $blue;
+  text-transform: uppercase;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+  }
+
+  &:hover {
+    color: $blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+
+.tab__item.active {
+  
+  .tab__link {
+    &::before {
+      background-color: $light-black;
+    }
+
+    &:hover, &:focus {
+      color: $light-black;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+// Tabbable tabs
+// -------------------------
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  min-height: 340px;
+  padding: 20px 0;
+
+  @media(max-width: 470px) {
+    // padding-left: 15px;
+    // padding-right: 15px; 
+  }
+
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+
+// ++++++++++++++++++++++++++++++
+
+
+//   > li {
+// //     // float: left;
+// //     // // Make the list-items overlay the bottom border
+// //     // margin-bottom: -1px;
+// //     // padding: 0 15px;
+
+// //     // &:first-of-type {
+// //     //   padding-left: 0;
+// //     // }
+
+// //     // Actual tabs (as links)
+// //     // > a {
+// //     //   padding: 16px 0;
+// //     //   margin-right: 2px;
+// //     //   font-size: $font-size-tab-nav;
+// //     //   line-height: $line-height-base;
+// //     //   // border: 1px solid transparent;
+// //     //   // border-radius: $border-radius-base $border-radius-base 0 0;
+// //     //   text-transform: uppercase;
+// //     //   &:hover {
+// //     //     // border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+// //     //     background-color: transparent;
+// //     //   }
+// //     // }
+
+// //     // Active state, and its :hover to override normal :hover
+// //   //   &.active > a {
+// //   //     &,
+// //   //     &:hover,
+// //   //     &:focus {
+// //   //       color: $nav-tabs-active-link-hover-color;
+// //   //       // background-color: $nav-tabs-active-link-hover-bg;
+// //   //       border-bottom: 4px solid $nav-tabs-active-link-hover-border-color;
+// //   //       // border-bottom-color: transparent;
+// //   //       background-color: transparent;
+// //   //       cursor: default;
+// //   //     }
+// //   //   }
+// //   // }
+// //   // pulling this in mainly for less shorthand
+// //   &.nav-justified {
+// //     @extend .nav-justified;
+// //     @extend .nav-tabs-justified;
+//   }
+// }

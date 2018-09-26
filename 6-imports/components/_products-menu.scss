@@ -1,0 +1,61 @@
+.products-menu__row {
+  @include cf();
+}
+
+.main-menu__products-menu-wrapper {
+  position: absolute;
+  width: 100vw;
+  top: 101%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px 0;
+  background-color: $white;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in;
+  box-shadow: 0 28px 25px rgba($black, 0.5);
+
+  @media (max-width: 995px) {
+    display: none;
+  }
+}
+
+.main-menu__item:hover .main-menu__products-menu-wrapper {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.products-menu__title {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.products-menu__title-link {
+  color: $black;
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.products-menu__item {
+  margin-bottom: 10px;
+}
+
+.products-menu__title-wrap_four {
+  margin-top: 70px;
+}
+
+.products-menu_icon-arrow {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 12px;
+  height: 9px;
+  margin-left: 7px;
+  background: url('../img/icons/icon_arrow-right-green.png') no-repeat;
+}

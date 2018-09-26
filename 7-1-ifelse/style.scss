@@ -1,0 +1,12 @@
+$enable-rounded: true;
+
+.card {
+  padding: 20px;
+  background-color: red;
+
+  @if $enable-rounded {
+    border-radius: 10px;
+  } @else {
+    background-color: green;
+  }
+}

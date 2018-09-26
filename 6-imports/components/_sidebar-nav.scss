@@ -1,0 +1,41 @@
+.sidebar-nav {
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (max-width: 995px) {
+    padding: 0 0 40px;
+  }
+}
+
+.sidebar-nav_menu-items {
+  padding: 5px 0;
+}
+
+.active-item * {
+  color: $black;
+  font-weight: 800;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 9px;
+    background-image: url('../img/icons/icon_arrow-right.png');
+    background-repeat: no-repeat;
+    top: 3px;
+    left: -22px;
+  }
+}
+
+.sidebar-nav .dropdown {
+  max-width: 320px;
+}
+
+.sidebar-nav .btn-select {
+  width: 100%;
+}
+
+.sidebar-nav .dropdown-menu {
+  width: 100%;
+}

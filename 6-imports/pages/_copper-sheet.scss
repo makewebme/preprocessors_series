@@ -1,0 +1,75 @@
+.page-product-desc__container {
+  padding-bottom: 50px;
+}
+
+.page-product-desc__head {
+  padding-top: 40px;
+}
+
+.page-product-desc__content {
+  > p {
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 22px;
+    color: $light-black;
+  }
+}
+
+.page-product-desc__img-wrapper {
+  @media (max-width: 430px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.page-product-desc__img {
+  margin-bottom: 90px;
+}
+
+
+.certificates {
+  @include cf();
+
+  @media(max-width: 797px) {
+    padding: 0 10px;
+  }
+}
+
+.certificates__item {
+  box-sizing: content-box;
+  max-width: 138px;
+  margin-right: 20px;
+  float: left;
+
+  @media(max-width: 797px) {
+    width: 128px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: 356px) {
+    &:nth-of-type(even){
+      margin-right: 0;
+    }
+  }
+}
+
+.certificates__img-block {
+  padding: 10px;
+  border: 1px solid $gray-light;
+  margin-bottom: 15px;
+
+  .certificates__img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.certificates__link {
+  font-size: 13px;
+  color: $blue;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

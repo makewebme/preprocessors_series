@@ -1,0 +1,30 @@
+.about-us .heading {
+  color: $light-black;
+  font-size: $font-size-xl;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.about-us .sec {
+  margin-bottom: 40px;
+}
+
+.heading-subitem {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+.about-us__warranty-list {
+  list-style-type: disc;
+  padding-left: 30px;
+  margin-bottom: 15px;
+
+}
+
+.warranty-list__item {
+  padding-left: 8px;
+  margin-bottom: 4px;
+}

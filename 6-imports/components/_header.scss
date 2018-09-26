@@ -1,0 +1,152 @@
+.header-wrapper {
+  background-color: $white;
+  position: relative;
+  z-index: 30;
+  border-bottom: 1px solid $gray-light;
+}
+
+.header {
+  padding: 18px 0 0;
+  position: relative;
+  font-family: $font-family-roboto;
+
+  > * {
+    float: left;
+  }
+
+  @media (max-width: 994px) {
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 430px) {
+    padding-bottom: 25px;
+  }
+}
+
+.header__logo {
+  @media(max-width: 797px) {
+    padding-left: 15px;
+  }
+}
+
+// Navbar toggle
+
+.navbar-toggle {
+  position: relative;
+  padding: 8px 9px;
+  @include navbar-vertical-align(34px);
+  background-color: transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+  display: none;
+  outline: 0;
+
+  &:hover {
+    background-color: rgba($light-blue, 0.3);
+
+    @media (max-width: 430px) {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -26px;
+        height: 4px;
+        background-color: $green;
+      }
+    }
+  }
+
+  @media (max-width: 994px) {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 24px;
+  }
+
+  @media(max-width: 797px) {
+    right: 50px;
+    top: 13px;
+  }
+
+  @media (max-width: 430px) {
+    top: 21px;
+  }
+
+  // Bars
+  .icon-bar {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background-color: $blue;
+
+    + .icon-bar {
+      margin-top: 4px;
+    }
+  }
+}
+
+
+// Header info
+
+.header__info {
+  float: right;
+
+  @media(max-width: 994px) {
+    margin-right: 75px;
+  }
+}
+
+.toggle-lang {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url('../img/header/icon_language.png');
+
+  @media (max-width: 797px) {
+    display: none;
+  }
+}
+
+.phone {
+  display: inline-block;
+  padding: 20px 15px 15px;
+  padding-left: 45px;
+  font-weight: 700;
+  font-size: 18px;
+
+  @media(max-width: 797px) {
+    display: none;
+  }
+}
+
+.phone_mobile {
+  display: none;
+
+  &__link {
+    display: block;
+    width: inherit;
+    height: inherit;
+  }
+
+  @media(max-width: 797px) {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    width: 26px;
+    height: 26px;
+    background-image: url('../img/icons/icon_phone-mobile.png');
+  }
+
+  @media(max-width: 470px) {
+    right: 15px;
+  }
+
+  @media (max-width: 430px) {
+    top: 31px;
+  }
+}

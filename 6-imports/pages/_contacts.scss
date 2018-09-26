@@ -1,0 +1,121 @@
+.page-contacts {
+  .sidebar-nav {
+    @media(max-width: 797px) {
+      padding: 0;
+    }
+  }
+
+  .dropdown-toggle {
+    @media(max-width: 470px) {
+      margin: 0;
+    }
+  }
+}
+
+.page-contacts__container {
+  padding-bottom: 50px;
+}
+
+
+.page-contacts__contacts-head {
+  @include cf();
+
+  @media(max-width: 797px) {
+    > * {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contacts-head__title {
+  padding: 0;
+}
+
+.contacts-head__number-phone_wrap {
+  padding-left: 25px;
+
+  @media(max-width: 797px) {
+    padding: 0;
+  }
+}
+
+.contacts-head__number-phone {
+  font-family: $font-family-roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+  color: $light-black;
+}
+
+.contacts-head__btn-call {
+  padding: 0;
+  text-align: right;
+
+  @media(max-width: 797px) {
+    text-align: left;
+  }
+}
+
+
+// content block 
+
+.contacts-info__wrapper {
+  @include cf();
+  padding-bottom: 30px;
+
+  @media(max-width: 797px) {
+    text-align: left;
+  }
+}
+
+.contacts-info__address {
+  float: left;
+  font-weight: 500;
+  color: $light-black;
+
+  @media(max-width: 797px) {
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  @media(max-width: 470px) {
+    padding-right: 50px;
+  }
+}
+
+.contacts-info__time {
+  position: relative;
+  float: right;
+  padding-left: 25px;
+  font-weight: 400;
+  color: $light-black;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    background: url('../img/icons/icon_clock.png');
+    z-index: 10;
+  }
+
+  @media(max-width: 797px) {
+    float: none;
+  }
+}
+
+.contacts-info__map-wrapper {
+  @media(max-width: 430px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.contacts-info__map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+  background: url('../img/map.jpg') no-repeat center;
+  background-size: cover;
+}

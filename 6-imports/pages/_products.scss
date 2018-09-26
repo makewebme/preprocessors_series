@@ -1,0 +1,33 @@
+.page-products__head {
+  border: none;
+}
+
+.page-products__h1 {
+  margin-bottom: 25px;
+}
+
+.page-products-menu {
+  margin-bottom: 50px;
+}
+
+.page-products-menu__item {
+  padding-left: 0;
+  padding-right: 30px;
+
+  @media(max-width: 797px) {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media(max-width: 470px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.page-products-menu__img-block {
+  margin-bottom: 25px;
+}

@@ -1,0 +1,37 @@
+@mixin border-top-radius($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-right-radius($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+// Use mixins
+
+.cont {
+  display: flex;
+  justify-content: space-around;
+}
+
+.block {
+  width: 20%;
+  height: 100px;
+  background-color: green;
+}
+
+.block1 { @include border-top-radius(10px) }
+.block2 { @include border-right-radius(10px) }
+.block3 { @include border-bottom-radius(10px) }
+.block4 { @include border-left-radius(10px) }

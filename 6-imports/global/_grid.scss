@@ -1,0 +1,112 @@
+//
+// Grid system
+// --------------------------------------------------
+
+//- INNER-PAGE
+
+.col-inner-page.col-lg-9 {
+  padding-right: 0;
+  padding-left: 25px;
+
+  @media (max-width: 995px) {
+    padding: 0;
+  }
+
+  @media (max-width: 470px) {
+    padding: 0 15px;
+  }
+}
+
+.page-not-found__content-wrapper,
+.page-search-result__content-wrapper {
+
+  @media(max-width: 470px) {
+    padding: 0 15px;
+  }
+}
+
+.inner-page__content-wrapper {
+  padding-top: 40px;
+  @include cf();
+}
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed;
+  min-width: 320px;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+// .container-fluid {
+//   @include container-fixed;
+// }
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+// .row {
+//   @include make-row;
+// }
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}

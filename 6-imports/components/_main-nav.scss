@@ -1,0 +1,156 @@
+
+// Main menu
+
+.header__logo {
+  @media (min-width: 470px) and (max-width: 797px) {
+    padding: 0;
+  }
+}
+
+
+
+.header__main-menu {
+  padding-top: 10px;
+  display: table;
+  margin-left: 40px;
+}
+
+.main-menu__item {
+  position: static;
+  float: left;
+  padding: 0 15px;
+}
+
+.main-menu__link {
+  padding: 15px 0 25px;
+  text-transform: uppercase;
+  color: $blue;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+
+  &:hover {
+    background-color: transparent;
+    color: $red;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 4px;
+      background-color: $green;
+
+      @media (max-width: 994px) {
+        display: none;
+      }
+    }
+  }
+
+  @media(max-width: 797px) {
+    font-size: 20px;
+  }
+}
+
+
+// Sub Menu ( Producst menu )
+
+
+// tablet menu 965px
+
+@media (max-width: 994px) {
+  .navbar-nav {
+    position: absolute;
+    top: 101%;
+    left: 9999px;
+    opacity: 0;
+    right: 0;
+    text-align: center;
+    background-color: $white;
+    z-index: 999;
+    transition: transform 0.4s, opacity 0.4s;
+    transform: rotateX(90deg);
+  }
+
+  // Open menu for all screen resolution + animation
+  .navbar-nav-open {
+    left: 0;
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: 0 0;
+  }
+
+  .main-menu__item {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+  }
+
+  .main-menu__link {
+    padding: 15px 20px;
+  }
+}
+
+
+// tablet menu 767px
+
+@media (max-width: 797px) {
+
+  .main-menu__item {
+    display: block;
+    border-bottom: 1px solid rgba($gray, .1);
+  }
+}
+
+
+// mobile menu 430px
+
+@media (max-width: 430px) {
+  .navbar-nav {
+    margin: 0;
+    padding: 0 15px;
+    border-top: 1px solid rgba($gray, .1);
+  }
+
+  .main-menu__link {
+    padding: 22px 0;
+    text-align: left;
+  }
+}
+
+
+// icon lang for mobile menu
+
+.item__toggle-lang_mobile {
+  display: none;
+
+  @media (max-width: 797px) {
+    display: block;
+  }
+
+  .link__toggle-lang_mobile {
+    position: relative;
+    padding-left: 25px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 149px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 15px;
+      background: url('../img/header/icon_language.png');
+
+      @media (max-width: 430px) {
+        left: 0;
+      }
+    }
+  }
+}
+
+// END icon lang for mobile menu
+

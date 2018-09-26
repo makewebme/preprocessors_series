@@ -1,0 +1,121 @@
+//
+// Navbars
+// --------------------------------------------------
+
+
+// Wrapper and base class
+
+.navbar {
+  position: relative;
+  min-height: $navbar-height;
+  margin-bottom: $navbar-margin-bottom;
+  border: 1px solid transparent;
+  @include cf();
+
+  @media (min-width: $grid-float-breakpoint) {
+    border-radius: $navbar-border-radius;
+  }
+}
+
+
+// Navbar heading
+
+.navbar-header {
+  @include cf();
+
+  @media (min-width: $grid-float-breakpoint) {
+    float: left;
+  }
+}
+
+
+// Navbar collapse (body)
+
+.navbar-collapse {
+  overflow-x: visible;
+  padding-right: $navbar-padding-horizontal;
+  padding-left:  $navbar-padding-horizontal;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  @include cf();
+  -webkit-overflow-scrolling: touch;
+
+  &.in {
+    overflow-y: auto;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+
+    &.collapse {
+      display: block !important;
+      height: auto !important;
+      padding-bottom: 0;
+      overflow: visible !important;
+    }
+
+    &.in {
+      overflow-y: visible;
+    }
+  }
+}
+
+
+
+// Both navbar header and collapse
+
+.container,
+.container-fluid {
+  > .navbar-header,
+  > .navbar-collapse {
+    margin-right: -$navbar-padding-horizontal;
+    margin-left:  -$navbar-padding-horizontal;
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin-right: 0;
+      margin-left:  0;
+    }
+  }
+}
+
+
+// Navbar nav links
+
+.navbar-nav {
+  > li > a {
+    line-height: $line-height-computed;
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    // Dropdowns get custom display when collapsed
+    .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      > li > a,
+      .dropdown-header {
+        padding: 5px 15px 5px 25px;
+      }
+      > li > a {
+        line-height: $line-height-computed;
+        &:hover,
+        &:focus {
+          background-image: none;
+        }
+      }
+    }
+  }
+
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    float: left;
+    margin: 0;
+  }
+}
+

@@ -1,0 +1,13 @@
+$columns: 12
+
+div
+  box-sizing: border-box
+  background-color: orange
+  height: 40px
+  margin-top: 10px
+  float: left
+  border: 1px solid #000
+
+@for $i from 1 through $columns
+  .col-#{$i}
+    width: calc(100% / #{$columns / $i})

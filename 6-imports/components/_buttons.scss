@@ -1,0 +1,78 @@
+//
+// Buttons
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-family-btn, $font-size-base, $line-height-base, $btn-font-weight, $btn-border-radius-base);
+  @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      outline: none;
+    }
+  }
+
+  @media(max-width: 797px) {
+    max-width: 320px;
+    width: 100%;
+  }
+}
+
+.btn-select {
+  position: relative;
+  width: 223px;
+  @include button-variant($btn-select-color, $btn-select-bg, $btn-select-border);
+  @include button-size($padding-btn-select-vertical, $padding-btn-select-horizontal, $font-family-roboto, $font-size-m, $line-height-small, $btn-font-weight, $btn-border-radius-large);
+  padding-right: 30px;
+  text-align: left;
+}
+
+//Success appears as green
+.btn-main {
+  @include button-variant($btn-main-color, $btn-main-bg, $btn-main-border);
+  @include button-size($padding-btn-main-vertical, $padding-btn-main-horizontal, $font-family-btn-main, $font-size-m, $line-height-small, $btn-font-weight-bold, $btn-border-radius-base);
+}
+
+//Success appears as white
+.btn-card {
+  @include button-variant($btn-card-color, $btn-card-bg, $btn-card-border);
+  @include button-size($padding-btn-card-vertical, $padding-btn-card-horizontal, $font-family-btn-card, $font-size-s, $line-height-small, $btn-font-weight, $btn-border-radius-medium);
+  transition: all 0.3s;
+
+  &.btn-card-brown-hover {
+    &:hover {
+      color: #fff;
+      background-color: #a45b3a;
+    }
+  }
+
+  &.btn-card-purple-hover {
+    &:hover {
+      color: #fff;
+      background-color: #788fce;
+    }
+  }
+
+  &.btn-card-blue-hover {
+    &:hover {
+      color: #fff;
+      background-color: #1f70d4;
+    }
+  }
+}
+
+.btn-sourse {
+  @include button-variant($btn-sourse-color, $btn-sourse-bg, $btn-sourse-border);
+}

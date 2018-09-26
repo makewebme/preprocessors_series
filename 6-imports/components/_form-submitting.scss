@@ -1,0 +1,61 @@
+.form-submitting {
+  background-color: lighten($gray-light, 3%);
+  background-image: url('../img/img_forms/fill.png');
+  background-repeat: no-repeat;
+  background-position: 90% 52%;
+  padding: 30px 35px 35px;
+
+  &__input {
+    max-width: 470px;
+
+    & .form-control,
+    .form-submitting__select {
+      margin: 10px 0;
+    }
+  }
+
+  & .input-group-addon {
+    width: auto;
+    margin-top: 10px;
+
+    @media(max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 995px) {
+    background-position: 103% 52%;
+    padding: 30px 25px 35px;
+  }
+
+  @media(max-width: 797px) {
+    background-image: none;
+    padding: 15px 10px 25px;
+  }
+}
+
+.form-submitting__heading {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.form-submitting__select {
+
+  & .btn-select {
+    width: 100%;
+    border-radius: 0;
+    border-color: $input-border ;
+  }
+  
+  & .dropdown-menu {
+    left: 0;
+    right: 0;
+    max-height: 250px;
+    text-align: left;
+    overflow-y: scroll;
+
+    & a {
+      white-space: normal;
+    }
+  }
+}

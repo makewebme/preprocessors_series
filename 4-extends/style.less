@@ -1,0 +1,20 @@
+.btn {
+  border: 1px solid #000;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 2px #777;
+}
+
+.btn-success {
+  &:extend(.btn);
+  background-color: #3efe94;
+}
+
+.btn-danger {
+  &:extend(.btn);
+  background-color: #ff3c33;
+  color: #fff;
+}

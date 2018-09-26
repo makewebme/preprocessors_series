@@ -1,0 +1,26 @@
+.footer {
+  margin-top: 50px;
+  padding: 30px 15px;
+  min-width: 280px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 1px;
+    background-color: $gray-light;
+    display: block;
+    width: calc(100% - 30px);
+  }
+
+  @media(max-width: 797px) {
+    margin-top: 20px;
+  }
+}
+
+.footer__copy {
+  color: $gray;
+  margin: 0;
+}

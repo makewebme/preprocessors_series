@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "git+https://github.com/gulpjs/gulp.git#v4.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

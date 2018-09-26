@@ -1,0 +1,92 @@
+// Back common
+.products-search {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Back aluminium
+.products-search.aluminium {
+  background-image: url('../img/copper-rental/bg_aluminium.jpg');
+
+  @media(max-width: 470px) {
+    background-image: url('../img/copper-rental/bg_aluminium-mobile.jpg');
+  }
+}
+
+// Back copper
+.products-search.copper {
+  background-image: url('../img/copper-rental/bg_copper-rental.jpg');
+
+  @media(max-width: 470px) {
+    background-image: url('../img/copper-rental/bg_copper-rental-mobile.jpg');
+  }
+}
+
+// Back cable
+.products-search.cable {
+  background-image: url('../img/copper-rental/bg_cable.jpg');
+
+  @media(max-width: 470px) {
+    background-image: url('../img/copper-rental/bg_cable-mobile.jpg');
+  }
+}
+
+
+
+// Wrapper
+.products-search_wrapper {
+  padding-right: 37%;
+  border: none;
+  background: url('../img/logo_sevojno.png') no-repeat 100% 65px;
+
+  @media (max-width: 995px) {
+    padding-right: 20%;
+    background: transparent;
+  }
+  
+  @media(max-width: 797px) {
+    padding-right: 0;
+    width: auto;
+  }
+
+  @media(max-width: 470px) {
+    margin: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  > p {
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $white;
+  }
+}
+
+.products-search__title {
+  margin-bottom: 20px;
+  color: $white;
+}
+
+.products-search-menu {
+  padding-bottom: 50px;
+}
+
+.products-search-menu__row {
+  margin-bottom: 50px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.products-search-menu__item {
+  @media(max-width: 797px) {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

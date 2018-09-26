@@ -1,0 +1,22 @@
+@columns: 12;
+
+div {
+  box-sizing: border-box;
+  background-color: orange;
+  height: 40px;
+  margin-top: 10px;
+  float: left;
+  border: 1px solid #000;
+}
+
+.make-columns (@i) when (@i < (@columns + 1)) {
+  @diff: @columns / @i;
+
+  .col-@{i} {
+    width: 100% / @diff;
+  }
+
+  .make-columns(@i + 1);
+}
+
+.make-columns(1);
